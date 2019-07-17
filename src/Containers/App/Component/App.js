@@ -3,6 +3,35 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  
+  constructor(props){
+    super(props)
+    this.state = {}
+  }
+
+  componentWillMount() {
+    console.log('COMPONENT WILL MOUNT!')
+    this.props.fetchUsers()
+  }
+  componentDidMount() {
+      console.log('COMPONENT DID MOUNT!')
+  }
+  componentWillReceiveProps(newProps) {    
+      console.log('COMPONENT WILL RECIEVE PROPS!')
+  }
+  shouldComponentUpdate(newProps, newState) {
+      return true;
+  }
+  componentWillUpdate(nextProps, nextState) {
+      console.log('COMPONENT WILL UPDATE!');
+  }
+  componentDidUpdate(prevProps, prevState) {
+      console.log('COMPONENT DID UPDATE!')
+  }
+  componentWillUnmount() {
+      console.log('COMPONENT WILL UNMOUNT!')
+  }
+
   render() {
     return (
       <div className="App">

@@ -8,8 +8,13 @@ import history from './history'
 import routes from './routes'
 import configureStore  from './Store/Store'
 
+import Assay from './Assay/Assay'
+import Constants from './Assay/Constants'
+
 const store = configureStore()
 
+Assay.initialize({ apiPort: Constants.apiPort, apiUrl: Constants.apiHost, apiProtocol: Constants.apiProtocol})
+Assay.setSession('mBjA5QMph47HDrz6vwOZ_RjpKPI7eD5FSsNS')
 ReactDOM.render(
   <Provider store={store}>
     <CookiesProvider>
