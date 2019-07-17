@@ -14,7 +14,7 @@ import Constants from './Assay/Constants'
 const store = configureStore()
 
 Assay.initialize({ apiPort: Constants.apiPort, apiUrl: Constants.apiHost, apiProtocol: Constants.apiProtocol})
-Assay.setSession('mBjA5QMph47HDrz6vwOZ_RjpKPI7eD5FSsNS')
+Assay.setSession('')
 ReactDOM.render(
   <Provider store={store}>
     <CookiesProvider>
